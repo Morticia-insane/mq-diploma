@@ -128,7 +128,7 @@ a:hover {
     font-size: 20px;
     margin: 60px auto 40px;
   }
-  .section-title::after {
+.section-title::after {
     content: "";
     display: block;
     position: relative;
@@ -141,13 +141,42 @@ a:hover {
   }
 .trending_body {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mar-left {
+    margin-left: 4px;
+}
+.trends {
+    /* display: flex; */
+    padding: 20px 20px 0 20px;
+    margin-top: 60%;
 }
 .trending_item {
     position: relative;
-    background-image: url('../img/trend1.jpg') cover;
+    background: url('../img/trend1.jpg') no-repeat;
+    background-size: cover;
+    width: calc(25% - 3px);
+
 }
-.trending_item::after {
+.trending_item-2 {
+    position: relative;
+    background: url('../img/trend2.jpg') no-repeat;
+    background-size: cover;
+    width: calc(25% - 3px);
+}
+.trending_item-3 {
+    position: relative;
+    background: url('../img/trend3.jpg') no-repeat;
+    background-size: cover;
+    width: calc(25% - 3px);
+}
+.trending_item-4 {
+    position: relative;
+    background: url('../img/trend4.jpg') no-repeat;
+    background-size: cover;
+    width: calc(25% - 3px);
+}
+.trends::after {
     content: '';
     position: absolute;
     top: 0;
@@ -158,11 +187,11 @@ a:hover {
     opacity: 0.5;
 }
 .trending_textbox {
-    position: absolute;
     border: 2px solid #b59f5b;
-    bottom: 10px;
     width: 100%;
     z-index: 5;
+    padding: 60px 38px;
+    height: 320px;
 }
 .trending_link {
     color: #fff;
@@ -174,8 +203,42 @@ a:hover {
 .trending_title {
     padding-top: 15px;
 }
+/* тоже трендинг, но вторая версия */
+.trends-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+.trends-item {
+    max-height: 320px;
+    position: relative;
+    width: calc(25% - 3px);
+    display: flex;
+    /* align-items: baseline; */
+    /* justify-content: flex-end; */
+}
+.trends-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+.trends-first {
+    background: url('../img/trend1.jpg') no-repeat;
+    background-size: cover;
+}
+.trending_text {
+    border: 2px solid #b59f5b;
+    z-index: 5;
+    /* margin-top: 10%; */
+    padding: 60px 38px;
+}
+
 /* main */
-    .content {
+.content {
       display: flex;
       width: 1200px;
       margin-top: 60px;
@@ -183,42 +246,42 @@ a:hover {
       margin-left: auto;
       font-family: Open Sans;
     }
-    .card {
+.card {
       display: flex;
       align-items: flex-start;
       vertical-align: top;
     }
-    .card:nth-child(n + 2) {
+.card:nth-child(n + 2) {
       margin-top: 60px;
     }
-    .card-text {
+.card-text {
       padding-left: 30px;
     }
-    .card-list {
+.card-list {
       display: flex;
     }
-    .card-tag {
+.card-tag {
       color: #b59f5b;
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
     }
-    .card-tag:hover {
+.card-tag:hover {
       color: brown;
     }
-    .card-list li {
+.card-list li {
       list-style: none;
       margin-left: 15px;
       text-transform: uppercase;
     }
-    .card-list li:first-child {
+.card-list li:first-child {
       margin-left: 0;
     }
-    .card-link, .post-link {
+.card-link, .post-link {
       text-decoration: none;
       color: #000;
     }
-    .card-title {
+.card-title {
       padding-top: 13px;
       margin-bottom: 35px;
       text-transform: uppercase;
@@ -227,49 +290,49 @@ a:hover {
       font-size: 20px;
       width: 350px;
     }
-    .time-section {
+.time-section {
       display: flex;
       flex-wrap: wrap;
       font-size: 12px;
     }
-    .author-link {
+.author-link {
       margin-left: 25px;
       font-weight: bold;
       text-decoration: none;
       color: black;
     }
-    .card-date {
+.card-date {
       color: #888888;
     }
-    .card-description {
+.card-description {
       padding-top: 40px;
       font-size: 15px;
     }
-    .card-description > p:nth-child(n + 2) {
+.card-description > p:nth-child(n + 2) {
       padding-top: 10px;
     }
-    .news-picture {
+.news-picture {
       width: 380px;
       flex: none;
     }
-    .news-img {
+.news-img {
       width: 100%;
     }
     /* side */
-    .side-section {
+.side-section {
       margin-left: 120px;
     }
-    .side-news {
+.side-news {
       margin-bottom: 55px;
     }
-    .side-title {
+.side-title {
       padding-bottom: 25px;
       text-align: center;
       justify-items: center;
       text-transform: uppercase;
       font-size: 14px;
     }
-    .side-title::after {
+.side-title::after {
       content: "";
       display: block;
       position: relative;
@@ -280,35 +343,35 @@ a:hover {
       height: 3px;
       background: #b59f5b;
     }
-    .new-posts {
+.new-posts {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 14px;
     }
-    .post-item {
+.post-item {
       display: flex;
       padding-bottom: 20px;
     }
-    .post-title {
+.post-title {
       font-size: 14px;
       text-transform: uppercase;
       width: 200px;
       line-height: 1.5;
     }
-    .post-text {
+.post-text {
       padding-left: 15px;
     }
-    .post-title {
+.post-title {
       padding-top: 10px;
     }
-    label {
+label {
       width: 100%;
     }
-    .search-form {
+.search-form {
       width: 100%;
       display: flex;
     }
-    input {
+input {
       background-color: #f4f7f6;
       padding: 6px 12px;
       width: 100%;
@@ -316,37 +379,37 @@ a:hover {
       text-transform: capitalize;
       font-size: 13px;
     }
-    .search-btn {
+.search-btn {
       flex: none;
       border: none;
       width: 50px;
-      background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+      background-image: url(../svg/search.svg);
       background-repeat: no-repeat;
       background-size: 16px;
       background-position: center;
       background-color: #b59f5b;
     }
-    .search-btn:hover {
+.search-btn:hover {
       background-color: brown;
     }
-    .search-icon {
+.search-icon {
       width: 20px;
     }
-    .reader {
+.reader {
       width: 1px;
       height: 1px;
       clip: rect(1px, 1px, 1px, 1px);
       position: absolute;
     }
-    .subscription {
+.subscription {
       margin-top: 60px;
       margin-bottom: 60px;
     }
-    .subscribe-form {
+.subscribe-form {
       width: 100%;
       display: block;
     }
-    .subscribe-btn {
+.subscribe-btn {
       width: 100%;
       background-color: #b59f5b;
       cursor: pointer;
@@ -358,10 +421,10 @@ a:hover {
       margin-top: 17px;
       font-weight: 15px;
     }
-    .subscribe-btn:hover {
+.subscribe-btn:hover {
       background-color: brown;
     } 
-    .tags-list {
+.tags-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start; 
@@ -370,73 +433,139 @@ a:hover {
       font-weight: bold;
       text-transform: uppercase;
     }
-    .tags-item {
+.tags-item {
       margin-bottom: 5px;
       margin-left: 5px;
       border: 3px solid #eeeeee;
     }
-    .tags-link {
+.tags-link {
       display: block;
       padding: 10px 15px;
     }
-    .tags-link, .topics-link, .copyright-section {
+.tags-link, .topics-link, .copyright-section {
       text-decoration: none;
       color: #000;
     }
-    .topics {
+.topics {
       margin-top: 60px;
     }
-    .topics-list {
+.topics-list {
       list-style-type: none;
       font-weight: bold;
       text-transform: capitalize;
     }
-    .topics-item {
+.topics-item {
       border-bottom: 1px solid #eeeeee;
       padding-bottom: 15px;
       display: flex;
     }
-    .topics-item:nth-child(n + 2) {
+.topics-item:nth-child(n + 2) {
       padding-top: 15px;
     }
-    .topics-link {
+.topics-link {
       line-height: 2;
       font-size: 14px;
     }
-    .number {
+.number {
       vertical-align: top;
       color: #b59f5b;
       font-size: 12px;
       padding-left: 15px;
     }
-    /* footer */
-    .footer-container {
+/* products */
+.products_body {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-desc {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 3px solid #b59f5b;
+    padding: 40px 10px;
+    max-width: 350px;
+}
+.product-img {
+    max-width: 420px;
+    width: 100%;
+}
+.product-title {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.product-desc p {
+    line-height: 1.5;
+    font-size: 15px;
+    padding-top: 10px;
+}
+.product-link {
+    color: #b59f5b;
+}
+.buy-now {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+.old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+.shop-btn {
+    background-color: #b59f5b;
+    padding: 20px 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.shop-btn:hover {
+    background-color: orange;
+}
+
+/* footer */
+.footer-container {
       margin-top: 60px;
       font-family: Open Sans;
       padding-bottom: 70px;
       text-align: center;
     }
-    .footer-social {
+.footer-social {
       background-color: #f4f7f6;
       margin-bottom: 70px;
       width: 1170px;
       margin-left: auto;
       margin-right: auto;
     }
-    .social-icons {
+.social-icons {
       padding-top: 30px;
       padding-bottom: 30px;
     }
-    .social-list {
+.social-list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       list-style-type: none;
     }
-    .social-item {
+.social-item {
       margin-left: 30px;
     }
-    .social-link {
+.social-link {
       display: block;
       width: 20px;
       height: 20px;
@@ -444,22 +573,23 @@ a:hover {
       background-size: 20px;
       background-position: center;
     }
-    .copyright-section {
+.copyright-section {
       font-size: 12px;
     }
-    .social_twitter {
-      background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
+.social_twitter {
+      background-image: url(../svg/004-twitter.svg)
     }
-    .social_pinterest {
-      background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+.social_pinterest {
+      background-image: url(../svg/001-pinterest.svg);
     }
-    .social_facebook {
-      background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+.social_facebook {
+      background-image: url(../svg/002-facebook-logo.svg);
     }
-    .social_instagram {
-      background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+.social_instagram {
+      background-image: url(../svg/005-instagram.svg);
     }
-    .social_tumblr {
-      background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+.social_tumblr {
+      background-image: url(../svg/003-tumblr.svg);
     }
 /* adaptation to different devices */
+
