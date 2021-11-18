@@ -147,8 +147,8 @@ a:hover {
     margin-left: 4px;
 }
 .trends {
-    /* display: flex; */
-    padding: 20px 20px 0 20px;
+    display: flex;
+    padding: 20px;
     margin-top: 60%;
 }
 .trending_item {
@@ -191,7 +191,6 @@ a:hover {
     width: 100%;
     z-index: 5;
     padding: 60px 38px;
-    height: 320px;
 }
 .trending_link {
     color: #fff;
@@ -203,7 +202,8 @@ a:hover {
 .trending_title {
     padding-top: 15px;
 }
-/* тоже трендинг, но вторая версия */
+
+/* trends version 2 */
 .trends-body {
     display: flex;
     flex-wrap: wrap;
@@ -236,7 +236,6 @@ a:hover {
     /* margin-top: 10%; */
     padding: 60px 38px;
 }
-
 /* main */
 .content {
       display: flex;
