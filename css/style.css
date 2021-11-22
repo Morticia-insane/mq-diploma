@@ -827,17 +827,15 @@ label {
         font-size: 26px;
         margin: auto;
       }
-    .logo {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        max-width: 270px;
-        width: 100%;
+    .container-header {
+        flex-direction: column-reverse;
     }
     .trending_item {
         width: calc(100% - 3px);
         margin-bottom: 10px;
+    }
+    .logo {
+        margin-top: 60px;
     }
     .trending_item:nth-child(n + 2) {
         margin-left: 0;
