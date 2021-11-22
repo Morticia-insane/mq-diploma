@@ -5,60 +5,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MQ diploma</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">  
     </head>
-    <bod>
+    <body>
         <!-- nav -->
-        <header class="header">
+        <header id="header" class="header">
             <div class="container">
               <div class="container-header">
               <a href="#0"><img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" alt="logo" class="logo"></a>
-              <nav class="nav">
-                <ul class="nav-list">
-                  <li class="nav-list-item">
-                    <a href="#0" class="header-link">главная</a>
-                  </li>
-                  <li class="nav-list-item">
-                    <a href="#0" class="header-link">посты</a>
-                  </li>
-                  <li class="nav-list-item">
-                    <a href="#0" class="header-link">статьи</a>
-                  </li>
-                  <li class="nav-list-item">
-                    <a href="#0" class="header-link">теги</a>
-                  </li>
-                  <li class="nav-list-item">
-                    <a href="#0" class="header-link">темы</a>
-                  </li>
-                  <li class="nav-list-item">
-                    <a href="#0" class="header-link">контакты</a>
-                  </li>
-                 </ul>
-                </nav>
+              <div class="header-nav">
+                <div class="container-nav">
+                    <div class="header__body">
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                        <nav class="nav">
+                            <ul class="nav-list">
+                              <li class="nav-list-item">
+                                <a href="#0" class="header-link">главная</a>
+                              </li>
+                              <li class="nav-list-item">
+                                <a href="#0" class="header-link">посты</a>
+                              </li>
+                              <li class="nav-list-item">
+                                <a href="#0" class="header-link">статьи</a>
+                              </li>
+                              <li class="nav-list-item">
+                                <a href="#0" class="header-link">теги</a>
+                              </li>
+                              <li class="nav-list-item">
+                                <a href="#0" class="header-link">темы</a>
+                              </li>
+                              <li class="nav-list-item">
+                                <a href="#0" class="header-link">контакты</a>
+                              </li>
+                              <li class="nav-list-item">
+                                <a href="#pop-up" class="header-link">фитбэк</a>
+                              </li>
+                             </ul>
+                            </nav> 
+                    </div>
+                </div>
+            </div>
                </div>
              <h1 class="title">блог о творчестве, спорте, и образе жизни</h1>
            </div>
           </header>
-        <!-- now trending -->
-          <!-- <section class="trending-content">
-            <h2 class="section-title">Сейчас в тренде</h2>
-            <div class="trends-body">
-                <article class="trends-item trends-first">
-                        <div class="trending_text">
-                            <ul class="card-list">
-                                <li><a href="#0" class="card-tag">Lifestyle</a></li>
-                                <li><a href="#0" class="card-tag">interior</a></li>
-                            </ul>
-                            <a href="#0" class="trending_link"><h3 class="trending_title">Сейчас в тренде: сад на подоконнике</h3></a>
-                        </div>
-                </article>
-            </div> -->
-          </section>
-
-
+        <!-- trends -->
         <section class="trending">
             <h2 class="section-title">Сейчас в тренде</h2>
             <div class="trending_body">
-                <article class="trending_item">
+                <article class="trending_item bckgrnd-1">
                     <div class="trends">
                     <div class="trending_textbox">
                         <ul class="card-list">
@@ -69,7 +68,7 @@
                     </div>
                 </div>
                 </article>
-                <article class="trending_item-2 mar-left ">
+                <article class="trending_item bckgrnd-2">
                     <div class="trends">
                     <div class="trending_textbox">
                         <ul class="card-list">
@@ -79,7 +78,7 @@
                     </div>
                 </div>
                 </article>
-                <article class="trending_item-3 mar-left ">
+                <article class="trending_item bckgrnd-3">
                     <div class="trends">
                     <div class="trending_textbox">
                         <ul class="card-list">
@@ -88,10 +87,9 @@
                         </ul>
                         <a href="#0" class="trending_link"><h3 class="trending_title">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</h3></a>
                     </div>
-                    
                 </div>
                 </article>
-                <article class="trending_item-4 mar-left ">
+                <article class="trending_item bckgrnd-4">
                     <div class="trends">
                     <div class="trending_textbox">
                         <ul class="card-list">
@@ -102,9 +100,10 @@
                     </div>     
                 </div>
                 </article>
+
+
             </div>
-        </section> 
-          
+        </section>    
         <!-- main section -->
           <div class="content">
           <main class="main">
@@ -396,12 +395,44 @@
                     </article>
                 </div>
             </section>
+            <!-- pop-up -->
+            <div id="pop-up" class="pop-up">
+                <a href="#header" class="pop-up-area"></a>
+                <div class="pop-up-body">
+                    <div class="pop-up-content">
+                        <a href="#header" class="pop-up-close"><i class="fas fa-times"></i></a>
+                        <h2 class="section-title">ваш фитбэк</h2>
+                        <div class="pop-up-text">
+                            <div class="container-form">
+                                <form action="">
+                                  <label for="frequency">Как часто вы заходите на сайт?</label>
+                                  <select id="times" name="visits">
+                                    <option value="day">Почти каждый день</option>
+                                    <option value="week">Раз в неделю</option>
+                                    <option value="first">Впервые тут</option>
+                                  </select>
+                                  <label for="subscription">Вы подписаны на e-mail рассылку?</label><br/>
+                                    <input type="radio" id="Yes" name="answer" value="Yes">
+                                    <label for="html">Да</label>
+                                    <input type="radio" id="no" name="answer" value="no">
+                                    <label for="css">Нет</label><br/>
+                                  <label for="subject">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+                                  <textarea id="subject" name="subject" placeholder="Может, побольше рецептов?" style="height:200px"></textarea>
+                                </form>
+                              </div>
+                            <div class="contact-form">
+                                <a href="#"><button class="feedback">отправить</button></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>      
           <!-- footer -->
             <footer class="footer-container">
               <div class="footer-social">
                 <address class="social-icons">
                   <ul class="social-list">
-                    <li class="social-item"><a href="#0" class="social-link social_twitter"><span class="reader">Твиттер</span></a></li>
+                    <li class="social-item"><a href="#pop-up" class="social-link social_twitter"><span class="reader">Твиттер</span></a></li>
                     <li class="social-item"><a href="#0" class="social-link social_pinterest"><span class="reader">Пинтерест</span></a></li>
                     <li class="social-item"><a href="#0" class="social-link social_facebook"><span class="reader">фейсбук</span></a></li>
                     <li class="social-item"><a href="#0" class="social-link social_instagram"><span class="reader">инстаграм</span></a></li>
