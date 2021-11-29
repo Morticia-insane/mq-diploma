@@ -510,6 +510,7 @@ label {
     padding: 40px 30px;
     max-width: 350px;
     margin: -30px;
+    margin-bottom: 60px;
 }
 .product-img {
     text-align: center;
@@ -556,7 +557,6 @@ label {
 
 /* footer */
 .footer-container {
-      margin-top: 60px;
       font-family: Open Sans;
       padding-bottom: 70px;
       text-align: center;
@@ -665,10 +665,12 @@ label {
     border-radius: 5px;
 }
 .pop-up-close {
-    /* position: absolute; */
-    position: relative;
+    position: absolute;
     background: url(../svg/form-x.svg) no-repeat;
-    background-position: top right;
+    width: 20px;
+    height: 100%;
+    top: 15%;
+    left: 60%;
 }
 .contact-form {
     text-align: center;
@@ -833,10 +835,13 @@ label {
         height: 100vh;
         background: url("../img/banner-mobile.jpg") center;
     }
+    .nav-list-item:nth-child(n + 2) {
+        margin-left: 0;
+      }
     .title {
         max-width: 384px;
         font-size: 26px;
-        margin: auto;
+        margin: 45px auto;
       }
     .container-header {
         flex-direction: column-reverse;
