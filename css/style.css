@@ -41,45 +41,26 @@ ul li {
     }
 
 /* start */
-a:hover {
-      color: #888;
+@font-face {
+        font-family: Open Sans;
+        src:  url(../fonts/OpenSans-Bold.woff2) format("woff2"),
+              url(../fonts/OpenSans-Bold.woff) format("woff"),
+              url(../fonts/OpenSans-Bold.ttf) format("truetype");
+        font-weight: bold;
+        font-style: normal;
+      }
+      
+@font-face {
+        font-family: Open Sans;
+        src:  url(../fonts/OpenSans-Regular.woff2) format("woff2"),
+              url(../fonts/OpenSans-Regular.woff) format("woff"),
+              url(../fonts/OpenSans-Regular.ttf) format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+body {
+        font-family: Open Sans, Arial, sans-serif;
     }
-@font-face {
-      font-family: Open Sans;
-      src: url(../fonts/OpenSans-Bold.ttf);
-      font-weight: bold;
-      font-style: normal;
-    }
-@font-face {
-      font-family: Open Sans;
-      src: url(../fonts/OpenSans-Bold.woff);
-      font-weight: bold;
-      font-style: normal;
-    }
-@font-face {
-    font-family: Open Sans;
-    src: url(../fonts/OpenSans-Bold.woff2);
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: Open Sans;
-    src: url(../fonts/OpenSans-Regular.ttf);
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: Open Sans;
-    src: url(../fonts/OpenSans-Regular.woff);
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: Open Sans;
-    src: url(../fonts/OpenSans-Regular.woff2);
-    font-weight: 700;
-    font-style: normal;
-}
 
 /* nav */
 .header__body {
@@ -128,6 +109,9 @@ a:hover {
         font-size: 13px;
         text-decoration: none;
     }
+.header-link:hover {
+    text-decoration: underline;
+}
 .header {
       position: relative;
       background-image: url("../img/banner-bg.jpg");
@@ -284,7 +268,7 @@ a:hover {
       text-decoration: none;
     }
 .card-tag:hover {
-      color: brown;
+      text-decoration: underline;
     }
 .card-li {
       list-style: none;
@@ -339,6 +323,7 @@ a:hover {
 /* side */
 .side-section {
       margin-left: 120px;
+      width: 275px;
     }
 .side-news {
       margin-bottom: 55px;
@@ -479,7 +464,6 @@ label {
       padding-top: 15px;
     }
 .topics-link {
-      line-height: 2;
       font-size: 14px;
     }
 .number {
@@ -526,6 +510,9 @@ label {
 }
 .product-link {
     color: #b59f5b;
+}
+.product-link:hover {
+    text-decoration: underline;
 }
 .buy-now {
     display: flex;
@@ -695,7 +682,7 @@ label {
     display: block;
 }
 /* NAV ONLY */
-@media ( max-width: 1200px) {
+@media ( max-width: 1999px) {
     .logo {
         margin-left: 40px;
     }
@@ -765,10 +752,13 @@ label {
     .header-link {
         font-size: 24px;
     }
+    .nav-list-item:nth-child(n + 2) {
+        margin-left: 0;
+    }
 }
 
 /* adaptive */
-@media (min-width: 641px) and (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .header {
         background: url("../img/banner-bg-tablet.jpg") no-repeat center;
     }
@@ -815,9 +805,9 @@ label {
     .footer-social {
         max-width: 750px;
     }
-}
+} */
 
-@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+/* @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
     .trending_item {
         width: calc(25% - 3px);
         margin: 0;
@@ -828,12 +818,15 @@ label {
     .trending_textbox {
         padding: 60px 2%;
     }
-}
+} */
 
-@media (max-width: 640px) {
+/* @media (max-width: 767px) {
     .header {
         height: 100vh;
         background: url("../img/banner-mobile.jpg") center;
+    }
+    .header__burger span {
+        float: right;
     }
     .nav-list-item:nth-child(n + 2) {
         margin-left: 0;
@@ -874,6 +867,7 @@ label {
     }
     .side-section {
         margin: 60px 0;
+        width: 100%;
     }
     .products .section-title {
         margin-top: 0;
@@ -892,9 +886,9 @@ label {
     .product-desc {
         margin-bottom: 50px;
     }
-}
+} */
 
-@media (max-width: 640px) and (orientation: landscape) {
+/* @media (max-width: 640px) and (orientation: landscape) {
     .trending_item {
         width: calc(50% - 3px);
         margin-bottom: 4px;
@@ -905,32 +899,95 @@ label {
     .trending_textbox {
         padding: 60px 2%;
     }
-}
-@media (min-width: 641px) and (max-width: 900px) and (orientation: landscape) {
+} */
+
+
+@media (min-width: 768px) and (max-width: 1999px) and (orientation: landscape) {
+    .header {
+        background: url("../img/banner-bg-tablet.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .main {
+        width: calc(50% - 40px);
+        margin-left: 40px;
+    }
+    .news-picture {
+        width: 100%;
+    }
     .trending_item {
         width: calc(50% - 3px);
         margin-bottom: 4px;
     }
-    .trending_title {
-        font-size: 15px;
+    .trending_item:nth-child(odd) {
+        margin-left: 0;
     }
-    .content, .products_body {
-        display: flex;
-        flex-wrap: wrap;
-        width: 450px;
-        margin: auto;
-        margin-top: 60px;
-      }
+    .trends {
+        margin: 0 auto;
+        min-width: 410px;
+        width: 100%;
+    }
+    .trending_textbox {
+        padding: 40px;
+    }
+    .content {
+        max-width: 1999px;
+        margin: 40px auto;
+    }
     .card {
+        flex-direction: column;
         flex-wrap: wrap;
         }
-    .card-text {
-        padding-left: 0;
+    .card:nth-child(n + 2) {
+        margin-top: 40px;
     }
-    .card-list {
-        margin-top: 20px;
+    .card-text {
+        margin: 20px 0;
+        max-width: 680px;
+    }
+    .product-item {
+        width: calc(50% - 21px);
+    }
+}
+@media (max-width: 767px) {
+    .header {
+        height: 100vh;
+        background: url("../img/banner-mobile.jpg") center;
+    }
+    .trending_item {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    .trending_item:nth-child(n + 2) {
+        margin-left: 0;
+    }
+    .content {
+        max-width: 767px;
+        margin: 10px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main {
+        margin-left: 10px;
+    }
+    .card {
+        flex-direction: column;
+        flex-wrap: wrap;
+        }
+    .card:nth-child(n + 2) {
+        margin-top: 35px;
+    }
+    .news-picture {
+        width: calc(100% - 11px);
+    }
+    .card-text {
+        margin: 10px 0;
+        width: calc(100% - 11px);
     }
     .side-section {
-        margin: 60px 0;
+        margin: 35px 10px;
+        width: calc(100% - 11px);
+    }
+    .products_body {
+        justify-content: center;
     }
 }
