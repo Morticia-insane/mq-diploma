@@ -685,7 +685,7 @@ label {
     display: block;
 }
 /* NAV ONLY */
-@media ( max-width: 1999px) {
+@media ( max-width: 1919px) {
     .logo {
         margin-left: 40px;
     }
@@ -762,7 +762,7 @@ label {
 
 /* adaptive */
 
-@media (min-width: 768px), (max-width: 1999px) and (orientation: landscape) {
+@media (min-width: 768px), (max-width: 1920px) and (orientation: landscape) {
     .header {
         background: url("../img/banner-bg-tablet.jpg") no-repeat center;
         background-size: cover;
